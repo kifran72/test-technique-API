@@ -7,12 +7,14 @@ Votre mission :
 Crée une application (Back & Front) simple permettant de récupérer et d’afficher les statistiques des joueurs de tennis. L’exercice devrait te prendre environ 2h. Tu as le choix de réaliser la 4ème tâche sur n’importe quel Cloud. Un focus particulier doit être fait sur les 3 premières, la 4ème est fortement conseillée ! Les tâches Back et Front pourront être réalisées dans l’ordre que tu souhaites.
 
 Ce que l’on regarde :
+
 FRONT
 Un code clean et lisible
 Ton code devra être simple à comprendre
 Avoir une bonne structure / organisation de tes composants
 L’interface devra être responsive avec une bonne UX (Mobile & Desktop)
 L’implémentation des tests
+
 BACK
 Un code clean et lisible
 L’architecture applicative
