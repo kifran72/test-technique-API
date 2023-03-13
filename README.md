@@ -8,3 +8,15 @@ Crée une application (Back & Front) simple permettant de récupérer et d’aff
 
 
 https://tenisu.latelier.co/fullstack
+
+## Install the dependencies
+```bash
+yarn
+# or
+npm install
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+yarn dev
+```
