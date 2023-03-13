@@ -1,0 +1,119 @@
+---
+openapi: 3.0.3
+info:
+  title: statistic players
+  description: Allows you to retrieve and display tennis player statistics
+  version: 1.0.0
+paths:
+  /api/players:
+    get:
+      x-eov-operation-id: getPlayers
+      x-eov-operation-handler: players
+      summary: Retrieve all tennis players
+      tags:
+        - Default
+
+      responses:
+        200:
+          description: Return all tennis players
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Player"
+
+        500:
+          description: Server error
+  /api/player/{id}:
+      get:
+        x-eov-operation-id: getPlayerByID
+        x-eov-operation-handler: players
+        summary: Retrieve a tennis player by id
+        tags:
+          - Default
+        parameters:
+          - name: id
+            required: true
+            in: path
+            description: Player's ID
+            schema:
+              type: integer
+        responses:
+          200:
+            description: Return a tennis player
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Player"
+          500:
+            description: Server error
+  /api/players/stats:
+      get:
+        x-eov-operation-id: getStats
+        x-eov-operation-handler: players
+        summary: Retrieve stats of tennis players
+        tags:
+          - Default
+        responses:
+          200:
+            description: Return stats of tennis players
+            content:
+              application/json:
+                schema:
+                  type: object
+                
+          500:
+            description: Server error
+components:
+  schemas:
+    Player:
+      type: object
+      required:
+        - id
+        - firstname
+        - lastname
+        - shortname
+        - sex
+        - country
+        - picture
+        - data
+      properties:
+        id:
+          type: integer
+        firstname:
+          type: string
+        lastname:
+          type: string
+        shortname:
+          type: string
+        sex:
+          type: string
+        country:
+          $ref: "#/components/schemas/country"
+        picture:
+          type: string
+        data:
+          $ref: "#/components/schemas/data"
+    country:
+      properties:
+        picture:
+          type: string
+        code:
+          type: string
+    data:
+      properties:
+        rank:
+          type: integer
+        points:
+          type: integer
+        weight:
+          type: integer
+        height:
+          type: integer
+        age:
+          type: integer
+        last:
+          type: array
+          items:
+            type: integer

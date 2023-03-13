@@ -1,0 +1,26 @@
+{
+  "name": "test-technique-API",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon -e js,json,yaml --inspect=7000 src/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-openapi-validator": "^5.0.3",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^4.6.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "mongodb": "^5.1.0",
+    "morgan": "^1.10.0",
+    "openai": "^3.2.1",
+    "swagger-ui-express": "^4.6.2",
+    "verror": "^1.10.1"
+  }
+}
